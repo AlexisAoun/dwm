@@ -7,15 +7,21 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
+
+//Gruvbox Material Color Scheme
+
 static const char col_bg[]     	    = "#282828";
 static const char col_fg[]   	      = "#dfbf8e";
-static const char col_gray3[]       = "#bbbbbb";        
-static const char col_gray4[]       = "#d4be98";
+static const char col_white[]       = "#d4be98";
 static const char col_cyan[]        = "#005577";
+static const char col_red[]         = "#ea6962";
+static const char col_blue[]        = "#7daea3" ;
+static const char col_orange[]      = "#fe8019" ;
+static const char col_focusedGroup[]= "#b48ead";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { col_fg,    col_bg,    col_fg },
-	[SchemeSel]  = { col_gray4, col_bg,    col_fg  },
+	/*               fg                bg         border   */
+	[SchemeNorm] = { col_fg,           col_bg,    col_red },
+	[SchemeSel]  = { col_orange, col_bg,    col_fg  },
 };
 
 /* tagging */
