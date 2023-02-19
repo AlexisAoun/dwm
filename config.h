@@ -72,11 +72,15 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_fg, "-sf", col_bg, NULL };
 static const char *termcmd[]  = { "st", NULL };
+static const char *dmenuPower[]  = { "/home/aoun/scripts/dmenu-power-script.sh", NULL };
+static const char *dmenuScreen[]  = { "/home/aoun/scripts/dmenu-screen-layout-script.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_q,      spawn,          {.v = dmenuPower } },
+	{ MODKEY,                       XK_s,      spawn,          {.v = dmenuScreen } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
